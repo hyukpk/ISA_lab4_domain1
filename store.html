@@ -28,7 +28,7 @@
         // request was successful or not asychronously.
         function storeWord() {
             const xhttp = new XMLHttpRequest();
-            const url = "https://isalab4.netlify.app/api/definitions"
+            const url = "https://isa-lab4-domain2.vercel.app/api/definitions"
             const word = document.getElementById("word").value;
             const definition = document.getElementById("definition").value;
 
@@ -36,6 +36,7 @@
                 "word" : word,
                 "definition" : definition
             });
+            console.log(wordAndDef);
             xhttp.open("POST", url, true);
             xhttp.setRequestHeader("Content-Type", "application/json");
             xhttp.send(wordAndDef);
