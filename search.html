@@ -18,7 +18,7 @@
         function searchWord() {
             const xhttp = new XMLHttpRequest();
             const str = document.getElementById("search-box").value;
-            const url = "https://isa-lab4-domain2.vercel.app/api/definitions/?word=";
+            const url = "https://isa-lab4-domain2.vercel.app/api/definitions?word=";
             xhttp.open("GET", url + str, true);
             xhttp.send();
             xhttp.onreadystatechange = function () {
