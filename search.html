@@ -9,7 +9,7 @@
     <label for="search-box">Search</label>
     <input type="text" id="search-box">
     <input type="submit" value="Submit" onclick="searchWord()">
-</br>)
+</br>
     <h2>Results: </h2>
     <div id="result">
 
@@ -18,7 +18,7 @@
         function searchWord() {
             const xhttp = new XMLHttpRequest();
             const str = document.getElementById("search-box").value;
-            const url = "/api/definitions/?word=";
+            const url = "https://isa-lab4-domain1.vercel.app/store.html/api/definitions/?word=";
             xhttp.open("GET", url + str, true);
             xhttp.send();
             xhttp.onreadystatechange = function () {
