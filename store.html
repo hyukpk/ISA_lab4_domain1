@@ -31,11 +31,14 @@
             const url = "https://isa-lab4-domain2.vercel.app/api/definitions"
             const word = document.getElementById("word").value;
             const definition = document.getElementById("definition").value;
-
+            
+            // Used GPT to learn about sending requests using JSON objects (with key-value pairs) 
+            // Initially thought I had to make 2 separate requests for both word and definition
             const wordAndDef = JSON.stringify({
                 "word" : word,
                 "definition" : definition
             });
+            
             console.log(wordAndDef);
             xhttp.open("POST", url, true);
             xhttp.setRequestHeader("Content-Type", "application/json");
